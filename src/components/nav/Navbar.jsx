@@ -33,7 +33,7 @@ export const Navbar = ({ isRecruiting }) => {
       position="static"
       sx={{
         backgroundColor: theme.palette.blue.primary,
-        height: "64px"
+        height: {xs: "56px", sm: "64px"}
       }}
     >
       <CssBaseline />
