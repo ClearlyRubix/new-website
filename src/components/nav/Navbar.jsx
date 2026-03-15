@@ -20,12 +20,6 @@ import CollapseNavItem from "./CollapseNavItem";
 import ZooLogo from "../../assets/ZooLogo.svg";
 import { Link } from "react-router";
 
-
-const clickScroll = (id) => {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-};
-
 export const Navbar = ({ isRecruiting }) => {
   const theme = useTheme();
   const variant = "body1";
@@ -39,6 +33,7 @@ export const Navbar = ({ isRecruiting }) => {
       position="static"
       sx={{
         backgroundColor: theme.palette.blue.primary,
+        height: "64px"
       }}
     >
       <CssBaseline />
@@ -76,6 +71,12 @@ export const Navbar = ({ isRecruiting }) => {
           onClose={() => setMenuOpen(false)}
           disableSwipeToOpen={false}
           disableScrollLock={true}
+          PaperProps={{
+            sx: {
+              backgroundColor: theme.palette.blue.primary,
+              color: theme.palette.white.primary
+            }
+          }}
           >
             <List>
               <ListItemButton component={Link} to={"/#about-zoo"} onClick={() => setMenuOpen(false)}>
@@ -98,7 +99,7 @@ export const Navbar = ({ isRecruiting }) => {
           </SwipeableDrawer>
         </Box>
         {/* Desktop Navbar */}
-        <Box sx={{ display: {xs: "none", md: "flex"} }}>
+        <Box sx={{ display: {xs: "none", md: "flex"} }} height={"100%"}>
           <NonPopoverNavItem
             variant={variant}
             label="About"

@@ -1,32 +1,27 @@
 // Package Imports
 import React from "react";
-import { Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
+import { Link } from "react-router";
 
-export const NonPopoverNavItem = ({ href, label, ...props }) => {
+export const NonPopoverNavItem = ({ href, label, variant }) => {
   const theme = useTheme();
   return (
-    <a
-      href={href}
-      style={{
-        textDecoration: "none",
-        color: theme.palette.white.secondary,
+    <Box
+      height={"100%"}
+      alignContent={"center"}
+      sx={{
+        "&:hover": {
+          backgroundColor: theme.palette.blue.hover,
+        },
+        padding: theme.spacing(1, 2),
+        textDecoration: "none"
       }}
-      {...props}
+      component={Link}
+      to={href}
+      color={theme.palette.white.secondary}
     >
-      <Typography
-        variant="body1"
-        sx={{
-          padding: theme.spacing(1, 2),
-          alignContent: "center",
-          borderRadius: theme.spacing(1.25),
-          "&:hover": {
-            backgroundColor: theme.palette.blue.hover,
-          },
-        }}
-      >
-        {label}
-      </Typography>
-    </a>
+      <Typography variant={variant}>{label}</Typography>
+    </Box>
   );
 };
 

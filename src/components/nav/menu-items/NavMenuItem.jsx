@@ -1,14 +1,15 @@
 // Package Imports
 import React from "react";
 import { MenuItem, useTheme } from "@mui/material";
+import { Link } from "react-router";
 
 export const NavMenuItem = ({ handleClose, label, href }) => {
   const theme = useTheme();
 
   return (
     <MenuItem
-      component="a"
-      href={href}
+      component={Link}
+      to={href}
       onClick={handleClose}
       sx={{
         color: theme.palette.white.secondary,
