@@ -80,7 +80,7 @@ export const EventSection = () => {
           <Box sx={{ textAlign: "center", width: theme.spacing(46.25) }}>
             <Typography variant="h5">...and More!</Typography>
             <Typography variant="body1" sx={{ fontStyle: "italic" }} paragraph>
-              If you're curious to see what’s up and coming from ZOO, check out
+              If you're curious to see what's up and coming from ZOO, check out
               our calendar below!
             </Typography>
           </Box>
@@ -97,12 +97,16 @@ export const EventSection = () => {
             margin: theme.spacing(5, 0, 0),
           }}
         >
-          <Typography variant="h4">Our Past Events</Typography>
+          <Typography id="past-events" variant="h4">
+            Our Past Events
+          </Typography>
           <Typography variant="body1" sx={{ width: "60%" }} paragraph>
             Interested in our past events? Check our event and activity gallery
             for a look into our other successful events
           </Typography>
-          <StyledButton>VIEW GALLERY</StyledButton>
+          <StyledButton href="/events-gallery">
+            VIEW Events GALLERY
+          </StyledButton>
         </div>
       </Container>
     </>

@@ -1,5 +1,8 @@
 // Package Imports
 import { createTheme } from "@mui/material";
+import "@fontsource/roboto"
+import "@fontsource/ubuntu"
+import "@fontsource/poppins"
 
 // Customized theme for website to overwrite global styling from materialUi
 export const rootTheme = createTheme({

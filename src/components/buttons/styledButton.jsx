@@ -2,11 +2,12 @@
 import React from "react";
 import { Button, useTheme } from "@mui/material";
 
-export const StyledButton = ({ children }) => {
+export const StyledButton = ({ children, href }) => {
   const theme = useTheme();
 
   return (
     <Button
+      href={href}
       sx={{
         justifyContent: "end",
         color: theme.palette.button.font,

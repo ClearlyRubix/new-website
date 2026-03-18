@@ -18,8 +18,13 @@ export const EventNavMenuItems = ({ handleClose }) => (
     />
     <NavMenuItem
       handleClose={handleClose}
-      href={"/past-events"}
+      href={"/#past-events"}
       label="Past Events"
+    />
+    <NavMenuItem
+      handleClose={handleClose}
+      href={"/events-gallery"}
+      label="Events Gallery"
     />
   </>
 );

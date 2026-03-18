@@ -11,7 +11,14 @@ import {
 } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
-export const CommDialog = ({ open, setOpen, role, description, names }) => {
+export const CommDialog = ({
+  open,
+  setOpen,
+  role,
+  description,
+  names,
+  isRecruiting,
+}) => {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.only("xs"));
 
@@ -48,7 +55,25 @@ export const CommDialog = ({ open, setOpen, role, description, names }) => {
                 })}
               </ul>
             </>
-          ) : null}
+          ) : (
+            <>
+              <Typography variant="h6">
+                There are no active commissioners for this role!
+              </Typography>
+
+              <Typography variant="subtitle1" paragraph>
+                {isRecruiting ? (
+                  <>If you're interested, apply today!</>
+                ) : (
+                  <>
+                    If you're interested, reach out to{" "}
+                    <a href={`mailto:execs@zooengg.ca`}>execs@zooengg.ca</a> to
+                    see if they're accepting for this role.
+                  </>
+                )}
+              </Typography>
+            </>
+          )}
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose}>
