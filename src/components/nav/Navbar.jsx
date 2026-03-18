@@ -113,13 +113,13 @@ export const Navbar = ({ isRecruiting }) => {
                 </ListItemButton>
                 <CollapseNavItem buttonText="Council" items={[
                   <CouncilNavMenuItems />
-                ]}/>
+                ]} setMainMenuOpen={() => setMenuOpen(false)}/>
                 <CollapseNavItem buttonText="Events" items={[
                   <EventNavMenuItems />
-                ]}/>
+                ]} setMainMenuOpen={() => setMenuOpen(false)}/>
                 <CollapseNavItem buttonText="Sponsors" items={[
                   <SponsorNavMenuItems />
-                ]}/>
+                ]} setMainMenuOpen={() => setMenuOpen(false)}/>
                 <ListItemButton component={Link} to={"/#contact-us"} onClick={() => setMenuOpen(false)}>
                   <ListItemText primary="Contact Us"/>
                 </ListItemButton>

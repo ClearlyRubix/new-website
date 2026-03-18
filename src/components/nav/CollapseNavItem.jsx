@@ -2,7 +2,7 @@ import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import { Collapse, List, ListItemButton, ListItemText } from "@mui/material";
 import { useState } from "react";
 
-const CollapseNavItem = ({ buttonText = "", items = [] }) => {
+const CollapseNavItem = ({ buttonText = "", items = [], setMainMenuOpen }) => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -20,7 +20,7 @@ const CollapseNavItem = ({ buttonText = "", items = [] }) => {
             <Collapse in={open} timeout={"auto"}>
                 <List component={"div"} disablePadding sx={{ pl: 2 }}>
                     {items.map((item, i) => (
-                        <span key={i}>{item}</span>
+                        <span key={i} onClick={() => setMainMenuOpen()}>{item}</span>
                     ))}
                 </List>
             </Collapse>
