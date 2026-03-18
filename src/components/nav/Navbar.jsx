@@ -24,12 +24,14 @@ export const Navbar = ({ isRecruiting }) => {
   const theme = useTheme();
   const variant = "body1";
 
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false) // controls whether the mobile nav menu is open and controls the backdrop
+  const [openCollapse, setOpenCollapse] = useState(null) // controls which collapse is open
+
 
 
   return (
     <>
-      {/* Backdrop */}
+      {/* Backdrop for when mobile nav menu is open */}
       <Fade in={menuOpen} timeout={250}>
         <Box
           position={"fixed"}
@@ -75,7 +77,7 @@ export const Navbar = ({ isRecruiting }) => {
             sx={{display: {xs: "flex", md: "none"}, flexDirection: "column"}}
             height={"100%"}
           >
-            {/* Top Navbar Row */}
+            {/* Top Navbar "Row" */}
             <Box
               sx={{ display: "flex", justifyContent: "flex-end"}}
               height={"100%"}
@@ -111,15 +113,15 @@ export const Navbar = ({ isRecruiting }) => {
                 <ListItemButton component={Link} to={"/#about-zoo"} onClick={() => setMenuOpen(false)}>
                   <ListItemText primary="About"/>
                 </ListItemButton>
-                <CollapseNavItem buttonText="Council" items={[
+                <CollapseNavItem id="council" buttonText="Council" setMainMenuOpen={() => setMenuOpen(false)} openCollapse={openCollapse} setOpenCollapse={setOpenCollapse} items={[
                   <CouncilNavMenuItems />
-                ]} setMainMenuOpen={() => setMenuOpen(false)}/>
-                <CollapseNavItem buttonText="Events" items={[
+                ]}/>
+                <CollapseNavItem id="events" buttonText="Events" setMainMenuOpen={() => setMenuOpen(false)} openCollapse={openCollapse} setOpenCollapse={setOpenCollapse} items={[
                   <EventNavMenuItems />
-                ]} setMainMenuOpen={() => setMenuOpen(false)}/>
-                <CollapseNavItem buttonText="Sponsors" items={[
+                ]}/>
+                <CollapseNavItem id="sponsors" buttonText="Sponsors" setMainMenuOpen={() => setMenuOpen(false)} openCollapse={openCollapse} setOpenCollapse={setOpenCollapse} items={[
                   <SponsorNavMenuItems />
-                ]} setMainMenuOpen={() => setMenuOpen(false)}/>
+                ]}/>
                 <ListItemButton component={Link} to={"/#contact-us"} onClick={() => setMenuOpen(false)}>
                   <ListItemText primary="Contact Us"/>
                 </ListItemButton>
