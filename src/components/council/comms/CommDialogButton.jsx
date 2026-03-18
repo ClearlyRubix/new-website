@@ -8,7 +8,12 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 // Project-Defined Imports
 import { CommDialog } from "./CommDialog";
 
-export const CommDialogButton = ({ role, description, names }) => {
+export const CommDialogButton = ({
+  role,
+  description,
+  names,
+  isRecruiting,
+}) => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
@@ -41,6 +46,7 @@ export const CommDialogButton = ({ role, description, names }) => {
         role={role}
         description={description}
         names={names}
+        isRecruiting={isRecruiting}
       />
     </>
   );

@@ -6,7 +6,7 @@ import { Grid, Typography, useTheme } from "@mui/material";
 import { CommDialogButton } from "./CommDialogButton";
 import { commInfo } from "../CouncilInfo";
 
-export const CommSubSection = () => {
+export const CommSubSection = ({ isRecruiting }) => {
   const theme = useTheme();
 
   return (
@@ -35,6 +35,7 @@ export const CommSubSection = () => {
                 role={comm.commRole}
                 description={comm.commDescription}
                 names={comm.commNames}
+                isRecruiting={isRecruiting}
               />
             </Grid>
           );

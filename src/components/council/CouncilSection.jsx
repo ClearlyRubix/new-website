@@ -44,7 +44,7 @@ export const CouncilSection = ({ isRecruiting }) => {
 
       <Container maxWidth="md">
         <ExecSubSection />
-        <CommSubSection />
+        <CommSubSection isRecruiting={isRecruiting} />
         {isRecruiting && (
           <Box id="join-team" sx={{ textAlign: "right" }}>
             <div
