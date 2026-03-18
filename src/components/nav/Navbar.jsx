@@ -4,7 +4,7 @@
 import { AppBar, Toolbar, CssBaseline, useTheme, Avatar, Box, IconButton, Collapse, List, ListItemButton, ListItemText, Fade } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu"
 import { useState } from "react";
-
+import { Link } from "react-router";
 
 // Project-defined Imports
 import {
@@ -18,7 +18,7 @@ import CollapseNavItem from "./CollapseNavItem";
 
 // Images
 import ZooLogo from "../../assets/ZooLogo.svg";
-import { Link } from "react-router";
+
 
 export const Navbar = ({ isRecruiting }) => {
   const theme = useTheme();
