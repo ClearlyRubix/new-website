@@ -130,7 +130,7 @@ export const Navbar = ({ isRecruiting }) => {
             
           </Box>
           {/* Desktop Navbar */}
-          <Box sx={{ display: {xs: "none", md: "flex"} }} height={"100%"}>
+          <Box sx={{ display: {xs: "none", md: "flex"} }} height={"100%"} alignItems={"center"}>
             <NonPopoverNavItem
               variant={variant}
               label="About"

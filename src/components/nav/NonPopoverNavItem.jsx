@@ -7,7 +7,6 @@ export const NonPopoverNavItem = ({ href, label, variant }) => {
   const theme = useTheme();
   return (
     <Box
-      height={"100%"}
       alignContent={"center"}
       sx={{
         "&:hover": {
@@ -19,6 +18,9 @@ export const NonPopoverNavItem = ({ href, label, variant }) => {
       component={Link}
       to={href}
       color={theme.palette.white.secondary}
+      border={0}
+      borderRadius={"10px"}
+      boxSizing={"border-box"}
     >
       <Typography variant={variant}>{label}</Typography>
     </Box>

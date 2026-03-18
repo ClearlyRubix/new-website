@@ -29,20 +29,17 @@ export const NavMenuPopover = ({
   return (
     <>
       <Box
-        height={"100%"}
         alignContent={"center"}
         sx={{
           "&:hover": {
             backgroundColor: theme.palette.blue.hover,
           },
-          padding: theme.spacing(1, 2),
+          padding: theme.spacing(1, 1.5),
           textTransform: "none",
           color: theme.palette.white.secondary,
           "& .MuiButton-endIcon": {
             marginLeft: 0,
           },
-          border: 0,
-          borderRadius: 0,
         }}
         component={Button}
         onClick={handleClick}
