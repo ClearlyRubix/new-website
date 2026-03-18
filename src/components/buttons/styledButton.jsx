@@ -1,13 +1,14 @@
 // Package Imports
 import React from "react";
 import { Button, useTheme } from "@mui/material";
+import { Link } from "react-router";
 
 export const StyledButton = ({ children, href }) => {
   const theme = useTheme();
 
   return (
     <Button
-      href={href}
+      to={href}
       sx={{
         justifyContent: "end",
         color: theme.palette.button.font,
@@ -20,6 +21,7 @@ export const StyledButton = ({ children, href }) => {
         },
       }}
       variant="filled"
+      LinkComponent={Link}
     >
       {children}
     </Button>
