@@ -17,7 +17,7 @@ export const EventCard = ({ icon, eventName }) => {
         minWidth: theme.spacing(34),
         padding: theme.spacing(5, 4),
         textAlign: "center",
-        boxShadow: theme.shadows,
+        boxShadow: {xs: theme.shadows[1], sm: theme.shadows},
       }}
     >
       {icon}
