@@ -49,6 +49,9 @@ export const NavMenuPopover = ({
         aria-expanded={open ? "true" : undefined}
         endIcon={open ? <ExpandMore /> : <ExpandLess />}
         classes={{ endIcon: { marginLeft: 0 } }}
+        border={0}
+        borderRadius={theme.spacing(1.25)}
+        boxSizing={"border-box"}
       >
         <Typography variant={variant}>{buttonLabel}</Typography>
       </Box>

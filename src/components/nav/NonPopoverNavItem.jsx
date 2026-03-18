@@ -19,7 +19,7 @@ export const NonPopoverNavItem = ({ href, label, variant }) => {
       to={href}
       color={theme.palette.white.secondary}
       border={0}
-      borderRadius={"10px"}
+      borderRadius={theme.spacing(1.25)}
       boxSizing={"border-box"}
     >
       <Typography variant={variant}>{label}</Typography>
