@@ -1,5 +1,5 @@
 // Package imported components
-import { Route, Routes as ReactRoutes } from "react-router";
+import { Route, Routes as ReactRoutes, Navigate } from "react-router";
 import { ThemeProvider } from "@mui/material";
 
 // Project-defined components
@@ -20,6 +20,10 @@ export const Routes = () => {
                 <Route path="/" element={<LandingPage isRecruiting={isRecruiting} />} />
                 <Route path="/past-events" element={<EventPage />} />
                 <Route path="/meaning-of-zoo" element={<ZooMeaningPage />} />
+
+                {/* Catch-all route for invalid paths */}
+                {/* Redirects any unmatched path to the home page (/) */}
+                <Route path="*" element={<Navigate to="/" replace />} />
             </ReactRoutes>
         </ThemeProvider>
     );
