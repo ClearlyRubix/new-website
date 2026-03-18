@@ -1,10 +1,6 @@
 // Package Imports
 import React from "react";
-import {
-  Paper,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Paper, Typography, useTheme } from "@mui/material";
 
 export const EventCard = ({ icon, eventName }) => {
   const theme = useTheme();
@@ -17,7 +13,7 @@ export const EventCard = ({ icon, eventName }) => {
         minWidth: theme.spacing(34),
         padding: theme.spacing(5, 4),
         textAlign: "center",
-        boxShadow: theme.shadows,
+        boxShadow: theme.shadows[3],
       }}
     >
       {icon}

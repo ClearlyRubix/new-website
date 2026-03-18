@@ -25,7 +25,7 @@ export const CommDialogButton = ({ role, description, names }) => {
           width: theme.spacing(40),
           justifyContent: "space-between",
           textTransform: "uppercase",
-          boxShadow: theme.shadows,
+          boxShadow: theme.shadows[3],
           color: theme.palette.text.primary,
           background: "#fff",
           padding: theme.spacing(1, 1, 1, 3),
